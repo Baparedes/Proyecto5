@@ -11,12 +11,12 @@ function App() {
       <ErrorBoundary>
         <Title title={title} />
       </ErrorBoundary>
-      <div className="card">
-        <AnimalList />
-      </div>
       <p className="read-the-dogs">
         Haz click sobre cada animalito para obtener más información
       </p>
+      <div className="card">
+        <AnimalList />
+      </div>
     </>
   )
 }

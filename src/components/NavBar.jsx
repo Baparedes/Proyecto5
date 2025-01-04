@@ -31,7 +31,9 @@ function NavBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl" sx={{ backgroundColor:'darkslategray' }}>
+      <Container maxWidth="xl" sx={{
+        backgroundColor:'darkslategray'
+      }}>
         <Toolbar disableGutters>
           <PetsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
