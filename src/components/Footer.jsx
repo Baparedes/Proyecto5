@@ -5,6 +5,7 @@ import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Typography } from "@mui/material";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "darkslategray",
@@ -56,6 +57,7 @@ return (
         >{item.label}</Item>
       ))}
     </Stack>
+    <Typography variant="body2" padding={1}>Este proyecto fue realizado con fines académicos utilizando la API pública de Huachitos.cl</Typography>
   </Box>
 )
 }
