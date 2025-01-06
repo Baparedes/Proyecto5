@@ -6,11 +6,23 @@
   text-align: center;
 }
 
+.nav :hover {
+  color:darkcyan;
+}
+
 .card {
   margin-top: 1em;
   padding: 0;
 }
 
+.card :hover {
+  color: rgb(127, 186, 172);
+}
+
 .read-the-dogs {
   color: #aeadad;
+}
+
+.feet :hover {
+  color: rgb(95, 197, 240);
 }

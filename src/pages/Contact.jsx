@@ -1,3 +1,4 @@
+import React from 'react'
 import { Box, Paper, Typography } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
@@ -59,6 +60,9 @@ const Contact = () => {
           to="https://www.instagram.com/huachitos.cl/"
           target="_blank"
           rel="noopener"
+          sx={{
+            color: 'cadetblue'
+          }}
         >
           @huachitos.cl
         </Typography>

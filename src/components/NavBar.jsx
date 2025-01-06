@@ -13,9 +13,10 @@ import PetsIcon from '@mui/icons-material/Pets';
 import { Link } from 'react-router-dom';
 
 const pages = [
+  { name: 'Inicio', path: '/' },
   { name: 'Sobre Huachitos', path: '/about' },
   { name: 'Contacto', path: '/contact' },
-  { name: 'Blog', path: 'https://huachitos.cl/blog' }
+  { name: 'Blog', path: import.meta.env.VITE_BLOG_URL }
 ];
 
 function NavBar() {
@@ -34,7 +35,7 @@ function NavBar() {
       <Container maxWidth="xl" sx={{
         backgroundColor:'darkslategray'
       }}>
-        <Toolbar disableGutters>
+        <Toolbar className='nav' disableGutters>
           <PetsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"

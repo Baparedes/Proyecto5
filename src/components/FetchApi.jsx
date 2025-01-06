@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { React, useEffect, useState } from "react";
 
 const FetchApi = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("https://huachitos.cl/api/animales")
+    fetch(import.meta.env.VITE_API_URL)
       .then((response) => response.json())
       .then((responseJson) => {
         setData(responseJson.data);

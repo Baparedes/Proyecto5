@@ -7,10 +7,8 @@ import {
   Grid2,
   Typography,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-const API_URL = "https://huachitos.cl/api/animales";
 
 const AnimalList = () => {
   const [animals, setAnimals] = useState([]);
@@ -18,7 +16,7 @@ const AnimalList = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(API_URL)
+    fetch(import.meta.env.VITE_API_URL)
       .then((res) => res.json())
       .then((data) => setAnimals(data.data))
       .catch((error) => {
@@ -65,9 +63,10 @@ const AnimalList = () => {
                 image={animal.imagen}
                 alt={animal.nombre}
               />
-              <CardContent style={{ 
-                color:'white', 
-                backgroundColor:'darkslategray'
+              <CardContent sx={{ 
+                color:'darkslategray', 
+                backgroundColor:'white',
+                padding:'8px'
                 }}>
                 <Typography gutterBottom variant="body">
                   {capitalize(animal.nombre)}

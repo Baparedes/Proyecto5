@@ -1,3 +1,4 @@
+import React from 'react'
 import { Card, CardActionArea, CardContent, CardMedia, Container, Typography } from "@mui/material"
 import { Link } from "react-router-dom"
 import LogoHuachitos from "../assets/Logo-Huachitos-con-tag.svg"
@@ -9,22 +10,22 @@ const About = () => {
       <Card>
         <CardActionArea
         component={Link}
-        to='https://huachitos.cl/'
+        to={import.meta.env.VITE_ORIGINAL_URL}
         target="_blank"
         rel="noopener"
         >
           <CardMedia
-          component="img"
+          component="img" 
           height="auto"
           image={LogoHuachitos}
           alt="Logo Huachitos"
           />
           <CardContent style={{
             color:'white',
-            backgroundColor:'darkslategray'
+            backgroundColor: 'AppWorkspace'
           }}>
           <Typography gutterBottom variant="body1">
-          Entra al sitio web oficial de Huachitos haciendo click en la imagen y conocerás más detalles sobre esta maravillosa organización.
+          Entra al sitio web oficial de Huachitos y conocerás más detalles sobre esta maravillosa organización.
           </Typography>
           </CardContent>
         </CardActionArea>
